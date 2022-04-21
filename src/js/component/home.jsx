@@ -5,7 +5,13 @@ import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
 const Modal = () => {
-	const [On, setOn] = useState(0);
+	const [On, setOn] = useState(false);
+
+	if (On === true) {
+		setOn(false);
+	} else {
+		setOn(true);
+	}
 
 	return (
 		<div className="container">
@@ -14,9 +20,7 @@ const Modal = () => {
 					className="red"
 					type="button"
 					onClick={() => {
-						if (On > 0) {
-							setOn(true);
-						}
+						On ? "shadow" : "red";
 					}}></div>
 				<div
 					className="yellow"
