@@ -37,7 +37,7 @@ body{
     padding: 8px; 
 
 }
-.red-light {
+.red {
     display: block;
     width: 45px;
     height: 45px;
@@ -45,7 +45,7 @@ body{
     background-color: red;
     position: relative; 
 }
-.yellow-light {
+.yellow {
     display: block;
     width: 45px;
     height: 45px;
@@ -53,7 +53,7 @@ body{
     background-color: yellow;
     position: relative; 
 }
-.green-light {
+.green {
     display: block;
     width: 45px;
     height: 45px;
@@ -62,6 +62,14 @@ body{
     position: relative; 
 }
 
-.shadow {
-    box-shadow: 15px 15px 15px 15px yellow !important;
+.red-shadow {
+ 
+    box-shadow: 10px 10px 10px 10px yellow !important;
 }
+.yellow-shadow {
+    box-shadow: 10px 10px 10px 10px yellow !important;
+}
+.green-shadow {
+    box-shadow: 10px 10px 10px 10px yellow !important;
+}
+
