@@ -5,28 +5,26 @@ import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
 const Modal = () => {
-	const [On, setOn] = useState(false);
-
-	if (On === true) {
-		setOn(false);
-	} else {
-		setOn(true);
-	}
-
+	const [On, setOn] = useState("");
 	return (
 		<div className="container">
 			<div className="semaforo">
-				<div
-					className="red"
+				<input
+					className={On == "red" ? " red red-shadow" : "red "}
 					type="button"
 					onClick={() => {
-						On ? "shadow" : "red";
-					}}></div>
+						setOn("red");
+					}}></input>
 				<div
-					className="yellow"
+					className={
+						On == "yellow" ? "yellow yellow-shadow" : "yellow"
+					}
 					type="button"
-					onClick={() => setOn(false)}></div>
-				<div className="green" type="button"></div>
+					onClick={() => setOn("yellow")}></div>
+				<div
+					className={On == "green" ? " green green-shadow" : "green "}
+					type="button"
+					onClick={() => setOn("green")}></div>
 			</div>
 			<div className="stick"></div>
 		</div>
